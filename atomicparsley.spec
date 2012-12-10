@@ -48,3 +48,10 @@ OPTFLAGS="%{optflags} -Wall -Wno-deprecated -fno-strict-aliasing" \
 %doc COPYING
 %{_bindir}/%{name}
 
+
+
+%changelog
+* Fri Feb 17 2012 Andrey Bondrov <abondrov@mandriva.org> 0.9.0-1
++ Revision: 775963
+- imported package atomicparsley
+
