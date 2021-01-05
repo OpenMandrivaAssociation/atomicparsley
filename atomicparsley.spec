@@ -44,8 +44,8 @@ iTunes-style metadata tags in MPEG-4 files & 3gp assets in 3GPP/3GPP2 files.
 %make_build
 
 %install
-install -Dm 0755 build/%{name} %{buildroot}%{_bindir}/%{name}
-#%__install -D -m0755 %{name} %{buildroot}%{_bindir}/%{name}
+#install -Dm 0755 build/%{name} %{buildroot}%{_bindir}/%{name}
+%__install -D -m0755 %{oname} %{buildroot}%{_bindir}/%{name}
 
 
 %files
