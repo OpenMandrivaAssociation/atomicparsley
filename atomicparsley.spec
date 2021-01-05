@@ -22,7 +22,7 @@ AtomicParsley is a lightweight command line program that can read and set
 iTunes-style metadata tags in MPEG-4 files & 3gp assets in 3GPP/3GPP2 files. 
 
 %prep
-%setup -q -n %{oname}-%{version}%{oversion}
+%setup -q -n %{name}-%{version}%{oversion}
 %autopatch -p1
 
 #__sed -i '
