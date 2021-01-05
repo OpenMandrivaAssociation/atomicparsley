@@ -16,6 +16,7 @@ BuildRequires:	libstdc++-devel
 BuildRequires:	glibc-devel
 BuildRequires:	unzip
 BuildRequires:  cmake
+BuildRequires:  pkgconfig(zlib)
 
 %description
 AtomicParsley is a lightweight command line program that can read and set
