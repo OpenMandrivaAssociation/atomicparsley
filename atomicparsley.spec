@@ -1,6 +1,7 @@
 # Spec is based on MIB work
 
 %define		oname AtomicParsley
+%define   oversion .092811.cbecfb1
 
 Name:		atomicparsley
 Version:	20201231
@@ -9,8 +10,8 @@ Summary:	Command-Line Program to Read and Set iTunes-style Metadata Tags
 License:	GPLv2
 Group:		Sound
 Url:		http://atomicparsley.sourceforge.net
-Source0:	https://github.com/wez/atomicparsley/archive/%{version}.092811.cbecfb1/%{name}-%{version}.092811.cbecfb1.tar.gz
-Patch1:		AtomicParsley-fix_bad_math.patch
+Source0:	https://github.com/wez/atomicparsley/archive/%{version}%{oversion}/%{name}-%{version}%{oversion}.tar.gz
+#Patch1:		AtomicParsley-fix_bad_math.patch
 BuildRequires:	libstdc++-devel
 BuildRequires:	glibc-devel
 BuildRequires:	unzip
@@ -21,7 +22,7 @@ AtomicParsley is a lightweight command line program that can read and set
 iTunes-style metadata tags in MPEG-4 files & 3gp assets in 3GPP/3GPP2 files. 
 
 %prep
-%setup -q -n %{oname}-source-%{version}
+%setup -q -n %{oname}-%{version}%{oversion}
 %autopatch -p1
 
 #__sed -i '
