@@ -3,17 +3,18 @@
 %define		oname AtomicParsley
 
 Name:		atomicparsley
-Version:	0.9.0
-Release:	2
+Version:	20201231
+Release:	1
 Summary:	Command-Line Program to Read and Set iTunes-style Metadata Tags
 License:	GPLv2
 Group:		Sound
 Url:		http://atomicparsley.sourceforge.net
-Source0:	http://prdownloads.sourceforge.net/atomicparsley/%{oname}-source-%{version}.zip
+Source0:	https://github.com/wez/atomicparsley/archive/%{version}.092811.cbecfb1/%{name}-%{version}.092811.cbecfb1.tar.gz
 Patch1:		AtomicParsley-fix_bad_math.patch
 BuildRequires:	libstdc++-devel
 BuildRequires:	glibc-devel
 BuildRequires:	unzip
+BuildRequires:  cmake
 
 %description
 AtomicParsley is a lightweight command line program that can read and set
@@ -21,27 +22,28 @@ iTunes-style metadata tags in MPEG-4 files & 3gp assets in 3GPP/3GPP2 files.
 
 %prep
 %setup -q -n %{oname}-source-%{version}
-%patch1
+%autopatch -p1
 
-%__sed -i '
-s/g++/$CXX/g;
-s/-g//g;
-s/-O2/$OPTFLAGS/g;
-' build
-
-%__sed -i '1aset -e' build
+#__sed -i '
+#s/g++/$CXX/g;
+#s/-g//g;
+#s/-O2/$OPTFLAGS/g;
+#' build
+#
+#__sed -i '1aset -e' build
 
 %build
-CXX="%__cxx" \
-OPTFLAGS="%{optflags} -Wall -Wno-deprecated -fno-strict-aliasing" \
-./build
+#CXX="%__cxx" \
+#OPTFLAGS="%{optflags} -Wall -Wno-deprecated -fno-strict-aliasing" \
+#./build
+
+%cmake
+
+%make_instll
 
 %install
-%__rm -rf %{buildroot}
-%__install -D -m0755 %{oname} %{buildroot}%{_bindir}/%{name}
+%make_install -C build
 
-%clean
-%__rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
