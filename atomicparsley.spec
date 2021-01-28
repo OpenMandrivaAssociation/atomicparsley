@@ -1,17 +1,17 @@
 # Spec is based on MIB work
 
 %define		oname AtomicParsley
-%define   oversion .092811.cbecfb1
+%define   oversion .184825.1dbe1be
 
 Name:		atomicparsley
-Version:	20201231
+Version:	20210114
 Release:	1
 Summary:	Command-Line Program to Read and Set iTunes-style Metadata Tags
 License:	GPLv2
 Group:		Sound
 Url:		http://atomicparsley.sourceforge.net
 Source0:	https://github.com/wez/atomicparsley/archive/%{version}%{oversion}/%{name}-%{version}%{oversion}.tar.gz
-#Patch1:		AtomicParsley-fix_bad_math.patch
+
 BuildRequires:	libstdc++-devel
 BuildRequires:	glibc-devel
 BuildRequires:	unzip
@@ -26,25 +26,14 @@ iTunes-style metadata tags in MPEG-4 files & 3gp assets in 3GPP/3GPP2 files.
 %setup -q -n %{name}-%{version}%{oversion}
 %autopatch -p1
 
-#__sed -i '
-#s/g++/$CXX/g;
-#s/-g//g;
-#s/-O2/$OPTFLAGS/g;
-#' build
-#
-#__sed -i '1aset -e' build
 
 %build
-#CXX="%__cxx" \
-#OPTFLAGS="%{optflags} -Wall -Wno-deprecated -fno-strict-aliasing" \
-#./build
 
 %cmake -DCMAKE_BUILD_TYPE=Release \
 
 %make_build
 
 %install
-#install -Dm 0755 build/%{name} %{buildroot}%{_bindir}/%{name}
 %__install -D -m0755 build/%{oname} %{buildroot}%{_bindir}/%{name}
 
 
