@@ -39,7 +39,7 @@ iTunes-style metadata tags in MPEG-4 files & 3gp assets in 3GPP/3GPP2 files.
 #OPTFLAGS="%{optflags} -Wall -Wno-deprecated -fno-strict-aliasing" \
 #./build
 
-%cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release \
+%cmake -DCMAKE_BUILD_TYPE=Release \
 
 %make_build
 
