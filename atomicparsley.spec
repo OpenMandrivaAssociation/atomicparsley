@@ -1,10 +1,10 @@
 # Spec is based on MIB work
 
 %define		oname AtomicParsley
-%define   oversion .204813.840499f
+%define   oversion .200601.1ac7c08
 
 Name:		atomicparsley
-Version:	20210124
+Version:	20210617
 Release:	1
 Summary:	Command-Line Program to Read and Set iTunes-style Metadata Tags
 License:	GPLv2
@@ -41,11 +41,3 @@ iTunes-style metadata tags in MPEG-4 files & 3gp assets in 3GPP/3GPP2 files.
 %defattr(-,root,root)
 %doc COPYING
 %{_bindir}/%{name}
-
-
-
-%changelog
-* Fri Feb 17 2012 Andrey Bondrov <abondrov@mandriva.org> 0.9.0-1
-+ Revision: 775963
-- imported package atomicparsley
-
