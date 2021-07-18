@@ -1,10 +1,10 @@
 # Spec is based on MIB work
 
 %define		oname AtomicParsley
-%define   oversion .200601.1ac7c08
+%define   oversion .151551.e7ad03a
 
 Name:		atomicparsley
-Version:	20210617
+Version:	20210715
 Release:	1
 Summary:	Command-Line Program to Read and Set iTunes-style Metadata Tags
 License:	GPLv2
