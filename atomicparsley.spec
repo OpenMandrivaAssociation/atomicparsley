@@ -5,7 +5,7 @@
 
 Name:		atomicparsley
 Version:	20210715
-Release:	1
+Release:	2
 Summary:	Command-Line Program to Read and Set iTunes-style Metadata Tags
 License:	GPLv2
 Group:		Sound
