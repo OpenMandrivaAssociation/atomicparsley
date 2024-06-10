@@ -1,11 +1,11 @@
 # Spec is based on MIB work
 
 %define		oname AtomicParsley
-%define   oversion .172126.d813aa6
+%define   oversion .083822.1ed9031
 
 Name:		atomicparsley
-Version:	20221229
-Release:	2
+Version:	20240608
+Release:	1
 Summary:	Command-Line Program to Read and Set iTunes-style Metadata Tags
 License:	GPLv2
 Group:		Sound
@@ -35,7 +35,6 @@ iTunes-style metadata tags in MPEG-4 files & 3gp assets in 3GPP/3GPP2 files.
 
 %install
 %__install -D -m0755 build/%{oname} %{buildroot}%{_bindir}/%{name}
-
 
 %files
 %defattr(-,root,root)
