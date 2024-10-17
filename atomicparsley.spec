@@ -9,7 +9,7 @@ Release:	1
 Summary:	Command-Line Program to Read and Set iTunes-style Metadata Tags
 License:	GPLv2
 Group:		Sound
-Url:		http://atomicparsley.sourceforge.net
+Url:		https://atomicparsley.sourceforge.net
 Source0:	https://github.com/wez/atomicparsley/archive/%{version}%{oversion}/%{name}-%{version}%{oversion}.tar.gz
 
 BuildRequires:	libstdc++-devel
