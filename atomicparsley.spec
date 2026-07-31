@@ -4,7 +4,7 @@
 %define   oversion .083822.1ed9031
 
 Name:		atomicparsley
-Version:	20240608
+Version:	20240608.083822
 Release:	1
 Summary:	Command-Line Program to Read and Set iTunes-style Metadata Tags
 License:	GPLv2
@@ -23,7 +23,7 @@ AtomicParsley is a lightweight command line program that can read and set
 iTunes-style metadata tags in MPEG-4 files & 3gp assets in 3GPP/3GPP2 files. 
 
 %prep
-%setup -q -n %{name}-%{version}%{oversion}
+%setup -q -n atomicparsley-20240608.083822.1ed9031
 %autopatch -p1
 
 
